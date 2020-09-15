@@ -1,5 +1,8 @@
 # Så'rn plotter du Waveforms data i Matlab..
+Eksporter din data!
+![image](https://user-images.githubusercontent.com/56192310/93198691-ac17ba00-f74d-11ea-815f-23f1764edf2b.png)
 
+Tjek dine settings! (Kun flueben v. ```Headers``` og ```Labels```)
 ![image](https://user-images.githubusercontent.com/56192310/93177561-4ae2ed00-f733-11ea-8da1-c6a0edc0bd00.png)
 
 Datasættet fra Waveforms skal lige ændres fra
