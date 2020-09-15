@@ -1,2 +1,53 @@
-# MatlabPlot
-Sådan plotter man fra Matlab...
+# Så'rn plotter du Waveforms data i Matlab..
+
+
+Datasættet fra Waveforms skal lige ændres fra
+```
+Time (s)	PWM (V)	Motor (V)
+-0.008240000000000001	0.00152587890625	1.7510986328125
+-0.0082375	0.03173828125	1.75140380859375
+```
+til 
+```
+%Time (s)	PWM (V)	Motor (V)
+-0.008240000000000001	0.00152587890625	1.7510986328125
+-0.0082375	0.03173828125	1.75140380859375
+```
+Første linje udkommenteres!
+
+
+```m
+scope = load('DataFile.txt');
+
+ChA = [scope(:, 1), scope(:, 2)]; % V1 + noise
+ChB = [scope(:, 1), scope(:, 3)]; % V1 + noise
+```
+
+
+Her indstilles de parametre der gælder for plottet..
+```m
+%%% Indstillinger...
+f0 = 1e3 %% Hvilken frekvens kigger vi på? IKKE samplerate!!!!
+t0 = 1/f0 %% Perioden af den
+periods = 4; %% Hvor mange perioder vil du se ? 
+%%%%
+```
+
+
+Herefter kan figuren plottes..
+```m
+figure(101);
+clf;
+plot(ChA(:, 1), ChA(:, 2));
+hold on
+plot(ChB(:, 1), ChB(:, 2));
+hold off
+xlabel('Tid [s]');
+ylabel('[V]');
+xlim([0 t0*periods])
+% xlim([0 1e-3]) % Brug denne for visning fra [0:1] ms 
+legend('Kanal 1','Kanal 2')
+grid
+```
+
+
