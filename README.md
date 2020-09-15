@@ -1,5 +1,6 @@
 # Så'rn plotter du Waveforms data i Matlab..
 
+![image](https://user-images.githubusercontent.com/56192310/93177561-4ae2ed00-f733-11ea-8da1-c6a0edc0bd00.png)
 
 Datasættet fra Waveforms skal lige ændres fra
 ```
