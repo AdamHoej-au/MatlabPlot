@@ -19,8 +19,8 @@ Første linje udkommenteres!
 ```m
 scope = load('DataFile.txt');
 
-ChA = [scope(:, 1), scope(:, 2)]; % V1 + noise
-ChB = [scope(:, 1), scope(:, 3)]; % V1 + noise
+ChA = [scope(:, 1), scope(:, 2)]; % Kanal 1
+ChB = [scope(:, 1), scope(:, 3)]; % Kanal 2
 ```
 
 
